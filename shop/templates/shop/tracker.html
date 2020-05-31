@@ -1,0 +1,20 @@
+{% extends 'shop/basefile.html' %}
+{%  block title %} tracker{% endblock %}
+{% load static %}
+
+{%  block body %}
+<h1>{{a|capfirst}}</h1>
+<h1>{{b}}</h1>
+<h1>{{c}}</h1>
+<h1>{{d|default:'myname is shubham'|capfirst|length}}</h1>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
