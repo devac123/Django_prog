@@ -13,6 +13,18 @@ class Product(models.Model):
     def __str__(self):
         return self.product_name
 
+class Contact(models.Model):
+    msg_id = models.AutoField(primary_key =True)
+    name = models.CharField(max_length = 20)
+    phone = models.CharField(max_length = 500)
+    email = models.CharField(max_length= 50, default = "")
+    qury = models.CharField(max_length= 5000, default= "")
 
-myob = Product(models.Model)
-print(myob)
+    def __str__(self):
+        return self.name
+
+
+
+
+
+

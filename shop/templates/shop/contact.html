@@ -1,2 +1,28 @@
 {% extends 'shop/basefile.html' %}
 {%  block title %} contactpage {% endblock %}
+{%  block body %}
+<div class="container">
+    <h1>Contuct us</h1>
+<form action="/shop/contact/" method="post">
+ {% csrf_token %}
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="name">
+  </div>
+  <div class="form-group">
+    <label for="phone">Mobile no.</label>
+    <input type="number" class="form-control" id="phone" name="phone"  placeholder="Enter your mobile no.">
+  </div>
+
+    <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="enter your Email">
+  </div>
+  <div class="form-group">
+    <label for="qury">EnterYour message</label>
+    <textarea class="form-control" id="qury" rows="3" name="qury"></textarea>
+  </div>
+    <button class="btn btn-primary"> Submit</button>
+</form>
+    </div>
+{% endblock %}
