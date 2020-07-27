@@ -6,7 +6,9 @@ from django.http import HttpResponse
 def index(request):
     allProds = []
     catprods = Product.objects.values('category', 'id')
+    # print(catprods)
     cats = {item['category'] for item in catprods}
+    print(cats)
     for cat in cats:
         prod = Product.objects.filter(category=cat)
         n = len(prod)
